@@ -99,42 +99,43 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const signupBtn = document.getElementById('signup-btn');
-            const profileSection = document.getElementById('profile-section');
-            const logoutBtn = document.getElementById('logout-btn');
+        const signupBtn = document.getElementById('signup-btn');
+        const profileSection = document.getElementById('profile-section');
+        const logoutBtn = document.getElementById('logout-btn');
 
-            // Check if the user is logged in
-            const isLoggedIn = localStorage.getItem('isLoggedIn');
+        // Check if the user is logged in
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-if (isLoggedIn === 'true') {
-    // Hide the Sign Up button
-    signupBtn.classList.add('d-none');
-    // Show the Profile section with just "Welcome"
-    profileSection.classList.remove('d-none');
-    profileSection.innerHTML = `<a class="nav-link" href="profile.html">Welcome</a>`;
-    // Show the Logout button
-    logoutBtn.classList.remove('d-none');
-} else {
-    // Ensure the Sign Up button is visible and profile/logout are hidden
-    signupBtn.classList.remove('d-none');
-    profileSection.classList.add('d-none');
-    logoutBtn.classList.add('d-none');
-}
-            // Logout functionality
-            const logoutLink = document.getElementById('logout-link');
-            if (logoutLink) {
-                logoutLink.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    // Clear the user's authentication state
-                    localStorage.removeItem('isLoggedIn');
-                    localStorage.removeItem('userName');
-                    localStorage.removeItem('userEmail');
+        if (isLoggedIn === 'true') {
+            // Hide the Sign Up button
+            signupBtn.classList.add('d-none');
+            // Show the Profile section with a "Welcome" message
+            profileSection.classList.remove('d-none');
+            profileSection.innerHTML = `<a class="nav-link" href="profile.html">Welcome</a>`;
+            // Show the Logout button
+            logoutBtn.classList.remove('d-none');
+        } else {
+            // Ensure the Sign Up button is visible and profile/logout are hidden
+            signupBtn.classList.remove('d-none');
+            profileSection.classList.add('d-none');
+            logoutBtn.classList.add('d-none');
+        }
 
-                    // Reload the page to update the navbar
-                    window.location.reload();
-                });
-            }
-        });
+        // Logout functionality
+        const logoutLink = document.getElementById('logout-link');
+        if (logoutLink) {
+            logoutLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Clear the user's authentication state
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('userName');
+                localStorage.removeItem('userEmail');
+
+                // Reload the page to update the navbar
+                window.location.reload();
+            });
+        }
+    });
     </script>
     </body>
 </html>
