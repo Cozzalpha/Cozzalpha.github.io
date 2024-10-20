@@ -248,27 +248,22 @@
         const logoutBtn = document.getElementById('logout-btn');
 
         // Check if the user is logged in
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
+const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-        if (isLoggedIn === 'true') {
-            // Hide the Sign Up button
-            signupBtn.classList.add('d-none');
-            // Show the Profile section
-            profileSection.classList.remove('d-none');
-            // Show the Logout button
-            logoutBtn.classList.remove('d-none');
-
-            // Optionally, display the user's name
-            const userName = localStorage.getItem('userName');
-            if (userName) {
-                profileSection.innerHTML = `<a class="nav-link" href="profile.html">Welcome, ${userName}</a>`;
-            }
-        } else {
-            // Ensure the Sign Up button is visible and profile/logout are hidden
-            signupBtn.classList.remove('d-none');
-            profileSection.classList.add('d-none');
-            logoutBtn.classList.add('d-none');
-        }
+if (isLoggedIn === 'true') {
+    // Hide the Sign Up button
+    signupBtn.classList.add('d-none');
+    // Show the Profile section with just "Welcome"
+    profileSection.classList.remove('d-none');
+    profileSection.innerHTML = `<a class="nav-link" href="profile.html">Welcome</a>`;
+    // Show the Logout button
+    logoutBtn.classList.remove('d-none');
+} else {
+    // Ensure the Sign Up button is visible and profile/logout are hidden
+    signupBtn.classList.remove('d-none');
+    profileSection.classList.add('d-none');
+    logoutBtn.classList.add('d-none');
+}
 
         // Logout functionality
         const logoutLink = document.getElementById('logout-link');
