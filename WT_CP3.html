@@ -43,9 +43,7 @@
                         <a class="nav-link btn btn-primary text-white" href="signup.html">Sign Up</a>
                     </li>
                     <!-- Profile Section (Hidden by Default) -->
-                    <li class="nav-item d-none" id="profile-section">
-                        <a class="nav-link" href="profile.html">Profile</a>
-                    </li>
+                    
                     <!-- Logout Button (Hidden by Default) -->
                     <li class="nav-item d-none" id="logout-btn">
                         <a class="nav-link" href="#" id="logout-link">Logout</a>
@@ -144,11 +142,13 @@
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     if (isLoggedIn === 'true') {
-        // Hide the Sign Up button
+        // Hide the Sign Up/Login button
         signupBtn.classList.add('d-none');
-        // Show the Profile section with a "Welcome" message
+
+        // Show the "Welcome" message in the navbar (replacing the Profile link)
         profileSection.classList.remove('d-none');
-        profileSection.innerHTML = `<a class="nav-link" href="profile.html">Welcome</a>`;
+        profileSection.innerHTML = `<a class="nav-link">Welcome</a>`;
+
         // Show the Logout button
         logoutBtn.classList.remove('d-none');
     } else {
@@ -163,9 +163,8 @@
     if (logoutLink) {
         logoutLink.addEventListener('click', (e) => {
             e.preventDefault();
-            // Clear the user's authentication state
+            // Clear the user's login state
             localStorage.removeItem('isLoggedIn');
-            localStorage.removeItem('userName');
             localStorage.removeItem('userEmail');
 
             // Reload the page to update the navbar
@@ -173,6 +172,7 @@
         });
     }
 });
+
 </script>
 </body>
 </html>

@@ -77,7 +77,13 @@
                 .then((userCredential) => {
                     const user = userCredential.user;
                     alert("Login successful! Welcome, " + user.email);
-                    window.location.href = "index.html"; // Redirect to homepage
+                    
+                    // Store login status and user email in localStorage
+                    localStorage.setItem('isLoggedIn', 'true');
+                    localStorage.setItem('userEmail', user.email);
+
+                    // Redirect to homepage after successful login
+                    window.location.href = "index.html";
                 })
                 .catch((error) => {
                     console.error('Error logging in:', error);
