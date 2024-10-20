@@ -3,64 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaveSmiles - Explore NGOs</title>
+    <title>SaveSmiles - About Us</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="WT_CP_css.css">
-    <style>
-        /* Custom Styles */
-
-        /* Navbar Customization */
-        .bg-custom {
-            background-color: #f8f9fa; /* Light gray background */
-        }
-
-        /* Hero Section */
-        .hero {
-            background: url('your-hero-image.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 100px 0;
-
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-top: 20px;
-        }
-
-        /* NGO Cards */
-        .ngo-card {
-            transition: transform 0.3s;
-        }
-
-        .ngo-card:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer Customization */
-        footer {
-            background-color: #343a40;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
+    
+    <!-- Optional: Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="WT_CP_css_2.css">
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-custom shadow-sm sticky-top">
+    <!-- Navbar -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">SaveSmiles</a> <!-- Updated href -->
+            <a class="navbar-brand" href="#">SaveSmiles</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -68,86 +27,230 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <!-- Navigation items -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                           href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="WT_CP1.html">About Us</a>
+                        <a class="nav-link" href="WT_CP2.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="WT_CP2.html">Explore NGOs</a>
+                        <a class="nav-link" href="WT_CP3.html">Explore NGOs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="WT_CP3.html">Contact Us</a>
+                        <a class="nav-link" href="WT_CP4.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primary text-white ms-2"
-                           href="signup.html">Sign Up</a>
+                    <!-- Sign Up Button -->
+                    <li class="nav-item" id="signup-btn">
+                        <a class="nav-link btn btn-primary text-white" href="signup.html">Sign Up</a>
+                    </li>
+                    <!-- Profile Section (Hidden by Default) -->
+                    <li class="nav-item d-none" id="profile-section">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <!-- Logout Button (Hidden by Default) -->
+                    <li class="nav-item d-none" id="logout-btn">
+                        <a class="nav-link" href="#" id="logout-link">Logout</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    
+</header>
 
-    <!-- Hero Section (Optional) -->
-    <section class="hero">
+    <!-- About Section -->
+    <section class="about-section py-5">
         <div class="container">
-            <h1>Welcome to SaveSmiles</h1>
-            <p>Connecting you with NGOs across India to make a meaningful impact.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="pics/ngokapic.png" alt="About SaveSmiles" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2>About SaveSmiles</h2>
+                    <p>SaveSmiles is an NGO dedicated to improving the lives of underprivileged children in India. Our mission is to provide essential services such as healthcare, education, and nutrition to ensure that every child can live a life full of opportunities and happiness.</p>
+                    <p>With a passionate team and strong community support, we strive to create lasting change and empower the next generation.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Explore NGOs Across India</h2>
-
-            <!-- Search Bar -->
-            <div class="input-group mb-4">
-                <input type="text" id="searchInput" class="form-control" placeholder="Search NGOs by name or category..." aria-label="Search NGOs">
-                <button class="btn btn-outline-secondary" type="button">Search</button>
-            </div>
-
-            <!-- NGO Cards Grid -->
-            <div class="row" id="ngo-container">
-                <!-- Sample NGO Card -->
-                <div class="col-md-4 mb-4">
-                    <div class="card ngo-card h-100">
-                        <img src="ngo1.jpg" class="card-img-top" alt="NGO Name">
-                        <div class="card-body">
-                            <h5 class="card-title">NGO Name</h5>
-                            <p class="card-text">Brief description of the NGO's mission and activities.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
+    <!-- Mission Section -->
+<!-- Mission Section -->
+<section class="mission-section py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Our Mission</h2>
+        <p>Our mission is to enhance the well-being of children by providing access to quality education, healthcare, and essential resources. We strive to create sustainable impact through our various programs and collaborations with other organizations.</p>
+        <div class="row mt-4">
+            <!-- Mission Card 1: Education -->
+            <div class="col-md-4 mb-4">
+                <div class="card mission-card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-book-fill mission-icon"></i>
+                        <h5 class="card-title">Education</h5>
+                        <p class="card-text">Ensuring every child has access to quality education, empowering them to reach their full potential.</p>
                     </div>
                 </div>
-                <!-- Repeat similar blocks for more NGOs -->
-                <!-- Example -->
-                <div class="col-md-4 mb-4">
-                    <div class="card ngo-card h-100">
-                        <img src="ngo2.jpg" class="card-img-top" alt="NGO Name">
-                        <div class="card-body">
-                            <h5 class="card-title">NGO Name</h5>
-                            <p class="card-text">Brief description of the NGO's mission and activities.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
+            </div>
+            <!-- Mission Card 2: Healthcare -->
+            <div class="col-md-4 mb-4">
+                <div class="card mission-card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-heart-fill mission-icon"></i>
+                        <h5 class="card-title">Healthcare</h5>
+                        <p class="card-text">Providing essential healthcare services to children in need, ensuring their physical and mental well-being.</p>
                     </div>
                 </div>
-                <!-- Add more NGO cards as needed -->
             </div>
-
-            <!-- No Results Message -->
-            <div id="no-results" class="text-center d-none">
-                <p class="mt-4">No NGOs found matching your search criteria.</p>
+            <!-- Mission Card 3: Nutrition -->
+            <div class="col-md-4 mb-4">
+                <div class="card mission-card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-egg-fill mission-icon"></i>
+                        <h5 class="card-title">Nutrition</h5>
+                        <p class="card-text">Ensuring proper nutrition for healthy growth and development, enabling children to thrive.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
+</section>
+
+
+
+    <!-- Values Section -->
+    <section class="values-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Values</h2>
+            <p class="section-description">At SaveSmiles, our core values guide our mission and operations, ensuring we make a meaningful impact in the lives of children across India.</p>
+            <div class="row mt-4">
+                <!-- Value Card 1: Integrity -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card value-card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-shield-fill-check value-icon" aria-hidden="true"></i>
+                            <h5 class="card-title">Integrity</h5>
+                            <p class="card-text">We operate with honesty and complete transparency always.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Value Card 2: Compassion -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card value-card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-heart-fill value-icon" aria-hidden="true"></i>
+                            <h5 class="card-title">Compassion</h5>
+                            <p class="card-text">We approach our work with empathy and understanding.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Value Card 3: Excellence -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card value-card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-award-fill value-icon" aria-hidden="true"></i>
+                            <h5 class="card-title">Excellence</h5>
+                            <p class="card-text">We are committed to delivering high-quality services.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Value Card 4: Collaboration -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card value-card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-people-fill value-icon" aria-hidden="true"></i>
+                            <h5 class="card-title">Collaboration</h5>
+                            <p class="card-text">We believe in the power of working together to achieve our goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title ">Testimonials</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/Dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonial 1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Testimonial 2"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Testimonial 3"></button>
+                </div>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+                    <!-- Testimonial 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card border-0 text-center">
+                                    <div class="card-body">
+                                        <img src="pics/user1.jpg" alt="Anjali Sharma" class="rounded-circle mb-3" width="150" height="150">
+                                        <h5 class="card-title">Anjali Sharma</h5>
+                                        <p class="card-text fst-italic">
+                                            <i class="bi bi-quote"></i> 
+                                            "SaveSmiles has transformed the lives of so many children. Their dedication and compassion are truly inspiring."
+                                            <i class="bi bi-quote"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card border-0 text-center">
+                                    <div class="card-body">
+                                        <img src="pics/user2.jpg" alt="Anish Jha" class="rounded-circle mb-3" width="150" height="150">
+                                        <h5 class="card-title">Anish Jha</h5>
+                                        <p class="card-text fst-italic">
+                                            <i class="bi bi-quote"></i> 
+                                            "The programs offered by SaveSmiles are comprehensive and impactful. My child has benefited immensely."
+                                            <i class="bi bi-quote"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card border-0 text-center">
+                                    <div class="card-body">
+                                        <img src="pics/user3.jpg" alt="Riya Kapoor" class="rounded-circle mb-3" width="100" height="100">
+                                        <h5 class="card-title">Riya Kapoor</h5>
+                                        <p class="card-text fst-italic">
+                                            <i class="bi bi-quote"></i> 
+                                            "Their commitment to education and healthcare has given my children new hope and opportunities."
+                                            <i class="bi bi-quote"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more testimonials as needed -->
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
@@ -162,16 +265,57 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <!-- Firebase App (Core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
 
-<!-- Add Firebase services you want to use -->
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const signupBtn = document.getElementById('signup-btn');
+            const profileSection = document.getElementById('profile-section');
+            const logoutBtn = document.getElementById('logout-btn');
+
+            // Check if the user is logged in
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn === 'true') {
+                // Hide the Sign Up button
+                signupBtn.classList.add('d-none');
+                // Show the Profile section
+                profileSection.classList.remove('d-none');
+                // Show the Logout button
+                logoutBtn.classList.remove('d-none');
+
+                // Optionally, display the user's name
+                const userName = localStorage.getItem('userName');
+                if (userName) {
+                    profileSection.innerHTML = `<a class="nav-link" href="profile.html">Welcome, ${userName}</a>`;
+                }
+            } else {
+                // Ensure the Sign Up button is visible and profile/logout are hidden
+                signupBtn.classList.remove('d-none');
+                profileSection.classList.add('d-none');
+                logoutBtn.classList.add('d-none');
+            }
+
+            // Logout functionality
+            const logoutLink = document.getElementById('logout-link');
+            if (logoutLink) {
+                logoutLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Clear the user's authentication state
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('userName');
+                    localStorage.removeItem('userEmail');
+
+                    // Reload the page to update the navbar
+                    window.location.reload();
+                });
+            }
+        });
+    </script>
 </body>
 </html>

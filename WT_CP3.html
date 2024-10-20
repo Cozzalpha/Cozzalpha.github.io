@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaveSmiles - Contact Us</title>
+    <title>SaveSmiles - Explore NGOs</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="WT_CP_css.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="WT_CP_css_3.css">
+
 </head>
+
 <body>
 
     <!-- Navbar -->
+<header>
     <nav class="navbar navbar-expand-lg navbar-light bg-custom sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SaveSmiles</a>
@@ -22,49 +27,95 @@
                 <ul class="navbar-nav ms-auto">
                     <!-- Navigation items -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                           href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="WT_CP1.html">About Us</a>
+                        <a class="nav-link" href="WT_CP2.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="WT_CP2.html">Explore NGOs</a>
+                        <a class="nav-link" href="WT_CP3.html">Explore NGOs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="WT_CP3.html">Contact Us</a>
+                        <a class="nav-link" href="WT_CP4.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primary text-white"
-                           href="signup.html">Sign Up</a>
+                    <!-- Sign Up Button -->
+                    <li class="nav-item" id="signup-btn">
+                        <a class="nav-link btn btn-primary text-white" href="signup.html">Sign Up</a>
+                    </li>
+                    <!-- Profile Section (Hidden by Default) -->
+                    <li class="nav-item d-none" id="profile-section">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <!-- Logout Button (Hidden by Default) -->
+                    <li class="nav-item d-none" id="logout-btn">
+                        <a class="nav-link" href="#" id="logout-link">Logout</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+</header>
+    
 
- 
-    <section class="contact-section py-5">
+    <!-- Hero Section (Optional) -->
+    <section class="hero text-center d-flex align-items-center">
         <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Your Full Name">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            <h1>Welcome to SaveSmiles</h1>
+            <p>Connecting you with NGOs across India to make a meaningful impact.</p>
         </div>
     </section>
 
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Explore NGOs Across India</h2>
+
+            <!-- Search Bar -->
+            <div class="input-group mb-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search NGOs by name or category..." aria-label="Search NGOs">
+                <button class="btn btn-outline-secondary" type="button">Search</button>
+            </div>
+
+            <!-- NGO Cards Grid -->
+            <div class="row" id="ngo-container">
+                <!-- Sample NGO Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card ngo-card h-100">
+                        <img src="ngo1.jpg" class="card-img-top" alt="NGO Name">
+                        <div class="card-body">
+                            <h5 class="card-title">NGO Name</h5>
+                            <p class="card-text">Brief description of the NGO's mission and activities.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat similar blocks for more NGOs -->
+                <!-- Example -->
+                <div class="col-md-4 mb-4">
+                    <div class="card ngo-card h-100">
+                        <img src="ngo2.jpg" class="card-img-top" alt="NGO Name">
+                        <div class="card-body">
+                            <h5 class="card-title">NGO Name</h5>
+                            <p class="card-text">Brief description of the NGO's mission and activities.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more NGO cards as needed -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="text-center d-none">
+                <p class="mt-4">No NGOs found matching your search criteria.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p2>&copy; 2024 SaveSmiles. All Rights Reserved.</p2>
@@ -77,15 +128,56 @@
             </div>
         </div>
     </footer>
-
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="js/script.js"></script>
-        <!-- Firebase App (Core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const signupBtn = document.getElementById('signup-btn');
+        const profileSection = document.getElementById('profile-section');
+        const logoutBtn = document.getElementById('logout-btn');
 
-<!-- Add Firebase services you want to use -->
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+        // Check if the user is logged in
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        if (isLoggedIn === 'true') {
+            // Hide the Sign Up button
+            signupBtn.classList.add('d-none');
+            // Show the Profile section
+            profileSection.classList.remove('d-none');
+            // Show the Logout button
+            logoutBtn.classList.remove('d-none');
+
+            // Optionally, display the user's name
+            const userName = localStorage.getItem('userName');
+            if (userName) {
+                profileSection.innerHTML = `<a class="nav-link" href="profile.html">Welcome, ${userName}</a>`;
+            }
+        } else {
+            // Ensure the Sign Up button is visible and profile/logout are hidden
+            signupBtn.classList.remove('d-none');
+            profileSection.classList.add('d-none');
+            logoutBtn.classList.add('d-none');
+        }
+
+        // Logout functionality
+        const logoutLink = document.getElementById('logout-link');
+        if (logoutLink) {
+            logoutLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Clear the user's authentication state
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('userName');
+                localStorage.removeItem('userEmail');
+
+                // Reload the page to update the navbar
+                window.location.reload();
+            });
+        }
+    });
+</script>
 </body>
 </html>
