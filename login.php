@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['username'] = $username; // Store username in session
         echo "Login successful! Welcome, " . $username;
         // Redirect to a dashboard or homepage
-        header("Location: wt_Cp_newcss.html");
+        header("Location: index.html");
         exit();
     } else {
         echo "Invalid username or password";
